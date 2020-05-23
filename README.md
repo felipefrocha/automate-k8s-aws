@@ -12,19 +12,19 @@ Esse repositório foi disponibilizado coma a Licença [Apache 2.0](./LICENSE), s
 ## Ferramentas
 As ferramentas utilizadas para esse código são:
 * Automação 
-  * [Ansible](www.ansible.com) &reg
+  * [Ansible](www.ansible.com) &reg;
 * IaC
-  * [Terraform](www.terraform.io) &reg
+  * [Terraform](www.terraform.io) &reg;
 * Image builder / automação
-  * [Packer](www.packer.io) &reg
+  * [Packer](www.packer.io) &reg;
 * Cloud
   * [AWS Educate](https://aws.amazon.com/pt/education/awseducate/) &reg
 * Orquestradores de Container
-  * [Kubernetes](www.kubernetes.io) &reg
+  * [Kubernetes](www.kubernetes.io) &reg;
   * Subtipos 
     * [minikube](https://minikube.sigs.k8s.io/docs/) all-in-one sigle-node
     * [kind](https://kind.sigs.k8s.io/)     all-in-one multi-node
     * [microk8s](www.microk8s.io) multi-node ligthweight
 * Container
-  * [Docker](www.docker.com) &reg
-  * [containerd](www.containerd.io) &reg
+  * [Docker](www.docker.com) &reg;
+  * [containerd](www.containerd.io) &reg;
