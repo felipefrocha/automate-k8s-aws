@@ -18,7 +18,7 @@ As ferramentas utilizadas para esse código são:
 * Image builder / automação
   * [Packer](www.packer.io) &reg;
 * Cloud
-  * [AWS Educate](https://aws.amazon.com/pt/education/awseducate/) &reg
+  * [AWS Educate](https://aws.amazon.com/pt/education/awseducate/)&reg;
 * Orquestradores de Container
   * [Kubernetes](www.kubernetes.io) &reg;
   * Subtipos 
