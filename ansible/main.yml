@@ -1,0 +1,10 @@
+- hosts: all
+  become: yes
+  user: ubuntu
+  gather_facts: no
+  pre_tasks:
+  - name: 'Atualizando Repository'
+    raw: 'apt-get update'
+  roles:
+  - { role: install-k8s, tags: ["install_k8s_role"]}
+

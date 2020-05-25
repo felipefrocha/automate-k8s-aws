@@ -28,3 +28,11 @@ As ferramentas utilizadas para esse código são:
 * Container
   * [Docker](www.docker.com) &reg;
   * [containerd](www.containerd.io) &reg;
+
+## Apresentação de slides 
+
+
+## Referências 
+* Course    - Linux Foundations  Introdução a Kubernetes
+* Github    - @badtuxx 
+* Youtube   - @LINUXTips
