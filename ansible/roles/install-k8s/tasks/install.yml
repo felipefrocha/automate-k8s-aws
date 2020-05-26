@@ -1,5 +1,6 @@
 - name: Instalando o Docker
   shell: curl -fsSL https://get.docker.com | bash -
+  warn: no
 
 - name: Adicionando as chaves repo k8s no apt
   apt_key:
@@ -19,4 +20,12 @@
     - kubelet
     - kubeadm
     - kubectl
+
+
+- name: Install Modules  
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - apt-transport-https
 

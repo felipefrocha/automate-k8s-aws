@@ -35,7 +35,8 @@ resource "aws_vpc" "main" {
 
 /**
  * Available zones
-*/
+ */
+ 
 data "aws_availability_zones" "available" {
   state = "available"
 }
@@ -229,35 +230,6 @@ data "aws_ami" "this" {
 /**
  * Saida de dados
  */
-
-//resource "null_resource" "export_vpc_id" {
-//  triggers = {
-//    output_var_vpc = timestamp()
-//  }
-//  depends_on = [aws_vpc.main]
-//  provisioner "local-exec" {
-//    command = "echo $VPC_ID > VPC_ID"
-//    environment = {
-//      VPC_ID      = aws_vpc.main.id
-//      working_dir = path.root
-//    }
-//  }
-//}
-//
-//resource "null_resource" "export_subnet_id" {
-//  triggers = {
-//    output_var_vpc = timestamp()
-//  }
-//  depends_on = [aws_subnet.publics]
-//  provisioner "local-exec" {
-//    command = "echo $SUBNET_ID > SUBNET_ID"
-//    environment = {
-//    SUBNET_ID = aws_subnet.publics[0].id }
-//    working_dir = path.root
-//
-//  }
-//}
-
 
 data "template_file" "vpc_info" {
   template = file("${path.root}/vpc_config.cfg")

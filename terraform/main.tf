@@ -95,7 +95,6 @@ resource "aws_security_group" "sg_public_html" {
   }
 }
 
-
 resource "aws_instance" "master" {
   count = 1
   ami           = data.aws_ami.packer_builder.id
@@ -103,10 +102,18 @@ resource "aws_instance" "master" {
   key_name      = "aws_educate"
   subnet_id     = element(data.terraform_remote_state.vpc.outputs.out_puplic_subnets_id, 1)
   security_groups = [aws_security_group.sg_public.id,aws_security_group.sg_public_html.id]
+
   tags = {
     Name = format("Projetos-Master-%02d", count.index)
   }
+
+  user_data = base64encode(
+    templatefile( "${path.root}/data/hostname_config.sh", {
+      hostname = format("Projetos-Master-%02d", count.index + 1)
+    })
+  )
 }
+
 resource "aws_instance" "workers" {
   count         = 2
   ami           = data.aws_ami.packer_builder.id
@@ -114,10 +121,18 @@ resource "aws_instance" "workers" {
   key_name      = "aws_educate"
   subnet_id     = element(data.terraform_remote_state.vpc.outputs.out_puplic_subnets_id, 1)
   security_groups = [aws_security_group.sg_public.id,aws_security_group.sg_public_html.id]
+  
   tags = {
     Name = format("Projetos-Workers-%02d", count.index)
   }
+
+  user_data = base64encode(
+    templatefile( "${path.root}/data/hostname_config.sh", {
+      hostname = format("Projetos-worker-%02d", count.index + 1)
+    })
+  )
 }
+
 data "template_file" "k8s_cluster_info" {
   template = file("${path.root}/dev_hosts.cfg")
   depends_on = [

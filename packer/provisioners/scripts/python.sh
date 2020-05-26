@@ -6,4 +6,4 @@ while ! grep "Cloud-init .* finished" /var/log/cloud-init.log; do
 done
 
 sudo apt-get update
-sudo apt-get install -y python python-pip
+sudo apt-get install -y python3 python3-pip
