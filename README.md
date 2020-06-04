@@ -1,4 +1,4 @@
-# Tech drop dti digital - Kubernets
+# Kubernets - Introdução e estudo
 Material da apresentação do Kubernetes para @dti_digital e compania
 
 ## Introdução 
@@ -31,6 +31,7 @@ As ferramentas utilizadas para esse código são:
 
 ## Apresentação de slides 
 
+* https://slides.com/felipefrocha/kubernetes-intro/fullscreen
 
 ## Referências 
 * Course    - Linux Foundations  Introdução a Kubernetes
