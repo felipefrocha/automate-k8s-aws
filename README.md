@@ -33,6 +33,14 @@ As ferramentas utilizadas para esse código são:
 
 * [Apresentação Kubernetes](https://slides.com/felipefrocha/kubernetes-intro)
 
+## Introdução 
+
+### Comandos básicos
+
+```bash
+kubectl 
+```
+
 ## Referências 
 * Course    - Linux Foundations  Introdução a Kubernetes
 * Github    - @badtuxx 

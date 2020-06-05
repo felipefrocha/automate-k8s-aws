@@ -6,7 +6,11 @@ echo '###################################################'
 echo ''
 cd terraform/s3
 terraform init
-terraform apply -auto-approve
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.out
+terraform apply plan.out
+rm plan.out
 echo ''
 echo '#########################################################'
 echo 'Finalizado inicalização do ambiente e controle de estado'
@@ -22,7 +26,11 @@ echo '#######################################'
 echo ''
 cd ../vpc
 terraform init
-terraform apply -auto-approve
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.out
+terraform apply plan.out
+rm plan.out
 echo ''
 echo '#######################################'
 echo '      Infra de rede finalizada'
@@ -54,7 +62,11 @@ echo '#######################################'
 echo ''
 cd ../terraform
 terraform init
-terraform apply -auto-approve
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.out
+terraform apply plan.out
+rm plan.out
 echo ''
 echo '#######################################'
 echo '     Infra de k8s pronta para usar'
