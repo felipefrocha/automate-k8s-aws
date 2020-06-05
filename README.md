@@ -31,7 +31,7 @@ As ferramentas utilizadas para esse código são:
 
 ## Apresentação de slides 
 
-* https://slides.com/felipefrocha/kubernetes-intro/fullscreen
+* [Apresentação Kubernetes](https://slides.com/felipefrocha/kubernetes-intro)
 
 ## Referências 
 * Course    - Linux Foundations  Introdução a Kubernetes
