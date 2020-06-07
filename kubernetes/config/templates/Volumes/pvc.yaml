@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: simple-pvc
+spec:
+  selector:
+    matchLabels:
+       name: primeiro-pv # association between pvc to one specific pv
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 800Mi
