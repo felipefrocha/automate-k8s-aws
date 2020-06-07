@@ -27,4 +27,11 @@
   vars:
     packages:
     - apt-transport-https
+    - htop
 
+# - name: Configure Docker shared mount volumes
+# blockinfile:
+#     path: /lib/systemd/system/docker.service
+#     regexp: '^\[Service\]\n'
+#     line: [Service]\nMountFlags=shared
+#     state: present

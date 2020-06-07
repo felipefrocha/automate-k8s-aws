@@ -36,7 +36,7 @@ resource "aws_vpc" "main" {
 /**
  * Available zones
  */
- 
+
 data "aws_availability_zones" "available" {
   state = "available"
 }
