@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: share-pod
+  labels:
+    app: share-pod
+spec:
+  volumes:
+  - name: host-volume
+    hostPath:
+      path: /home/ubuntu/pod-volume
+  containers:
+  # Containers inside a single pod, share namespaces to communicate as localhost
+  - image: nginx
+    name: nginx
+    ports:
+    - containerPort: 80
+    volumeMounts:
+    - mountPath: /usr/share/nginx/html
+      name: host-volume
+  - image: debian
+    name: debian
+    volumeMounts:
+    - mountPath: /host-vol
+      name: host-volume
+    # Debian container alter the index.html file shared between containers in the same pod
+    command: ["/bin/sh", "-c", "echo Introdution to kubernetes > /host-vol/index.html; sleep 3600"]
