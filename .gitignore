@@ -1,0 +1,13 @@
+*.pem
+
+*.terraform*
+*configs*
+*tfstate*
+
+*.idea
+*.vscode
+
+*/node_modules/*
+*/hosts
+
+*/commands.sh
